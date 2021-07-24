@@ -60,6 +60,42 @@ void Error_Handler(void);
 /* Private defines -----------------------------------------------------------*/
 #define LED_Pin GPIO_PIN_13
 #define LED_GPIO_Port GPIOC
+#define motor2_data_Pin GPIO_PIN_3
+#define motor2_data_GPIO_Port GPIOA
+#define motor2_data_EXTI_IRQn EXTI3_IRQn
+#define motor1_data_Pin GPIO_PIN_4
+#define motor1_data_GPIO_Port GPIOA
+#define motor1_data_EXTI_IRQn EXTI4_IRQn
+#define motor1_in1_Pin GPIO_PIN_5
+#define motor1_in1_GPIO_Port GPIOA
+#define motor1_in2_Pin GPIO_PIN_6
+#define motor1_in2_GPIO_Port GPIOA
+#define motor3_pwm_Pin GPIO_PIN_0
+#define motor3_pwm_GPIO_Port GPIOB
+#define motor4_pwm_Pin GPIO_PIN_1
+#define motor4_pwm_GPIO_Port GPIOB
+#define motor2_in1_Pin GPIO_PIN_2
+#define motor2_in1_GPIO_Port GPIOB
+#define motor2_in2_Pin GPIO_PIN_10
+#define motor2_in2_GPIO_Port GPIOB
+#define motor3_data_Pin GPIO_PIN_12
+#define motor3_data_GPIO_Port GPIOB
+#define motor3_data_EXTI_IRQn EXTI15_10_IRQn
+#define motor4_data_Pin GPIO_PIN_13
+#define motor4_data_GPIO_Port GPIOB
+#define motor4_data_EXTI_IRQn EXTI15_10_IRQn
+#define motor1_pwm_Pin GPIO_PIN_4
+#define motor1_pwm_GPIO_Port GPIOB
+#define motor2_pwm_Pin GPIO_PIN_5
+#define motor2_pwm_GPIO_Port GPIOB
+#define motor4_in2_Pin GPIO_PIN_6
+#define motor4_in2_GPIO_Port GPIOB
+#define motor4_in1_Pin GPIO_PIN_7
+#define motor4_in1_GPIO_Port GPIOB
+#define motor3_in2_Pin GPIO_PIN_8
+#define motor3_in2_GPIO_Port GPIOB
+#define motor3_in1_Pin GPIO_PIN_9
+#define motor3_in1_GPIO_Port GPIOB
 /* USER CODE BEGIN Private defines */
 
 /* USER CODE END Private defines */

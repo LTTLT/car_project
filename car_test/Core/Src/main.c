@@ -1,31 +1,19 @@
 /* USER CODE BEGIN Header */
-/**
-  ******************************************************************************
-  * @file           : main.c
-  * @brief          : Main program body
-  ******************************************************************************
-  * @attention
-  *
-  * <h2><center>&copy; Copyright (c) 2021 STMicroelectronics.
-  * All rights reserved.</center></h2>
-  *
-  * This software component is licensed by ST under BSD 3-Clause license,
-  * the "License"; You may not use this file except in compliance with the
-  * License. You may obtain a copy of the License at:
-  *                        opensource.org/licenses/BSD-3-Clause
-  *
-  ******************************************************************************
-  */
+/*
+函数名：
+作用：
+备注：
+*/
 /* USER CODE END Header */
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
 #include "tim.h"
 #include "usart.h"
 #include "gpio.h"
-#include "wcnm.h"
+
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-
+#include "wcnm.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -45,7 +33,6 @@
 /* Private variables ---------------------------------------------------------*/
 
 /* USER CODE BEGIN PV */
-
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -75,14 +62,14 @@ int main(void)
   HAL_Init();
 
   /* USER CODE BEGIN Init */
-
+	motor_drive_init();
   /* USER CODE END Init */
 
   /* Configure the system clock */
   SystemClock_Config();
 
   /* USER CODE BEGIN SysInit */
-
+	
   /* USER CODE END SysInit */
 
   /* Initialize all configured peripherals */
@@ -90,17 +77,24 @@ int main(void)
   MX_USART1_UART_Init();
   MX_TIM2_Init();
   MX_TIM1_Init();
+  MX_TIM3_Init();
   /* USER CODE BEGIN 2 */
 	HAL_TIM_IC_Start_IT(&htim2,TIM_CHANNEL_1);//开启中断	
+	HAL_TIM_IC_Start_IT(&htim2,TIM_CHANNEL_2);
 	HAL_TIM_Base_Start_IT(&htim1); //开启定时器
+	HAL_TIM_PWM_Start(&htim3,TIM_CHANNEL_1);//电机1234pwm控制初始化
+	HAL_TIM_PWM_Start(&htim3,TIM_CHANNEL_2);
+	HAL_TIM_PWM_Start(&htim3,TIM_CHANNEL_3);//电机1234pwm控制初始化
+	HAL_TIM_PWM_Start(&htim3,TIM_CHANNEL_4);
   /* USER CODE END 2 */
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
   while (1)
   {
+		
     /* USER CODE END WHILE */
-		get_distance_data();
+	
     /* USER CODE BEGIN 3 */
   }
   /* USER CODE END 3 */

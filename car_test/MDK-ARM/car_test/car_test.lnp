@@ -23,6 +23,8 @@
 "car_test\system_stm32f1xx.o"
 "car_test\wcnm.o"
 "car_test\motor_data.o"
+"car_test\motor_drive.o"
+"car_test\pid.o"
 --library_type=microlib --strict --scatter "car_test\car_test.sct"
 --summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
 --info sizes --info totals --info unused --info veneers

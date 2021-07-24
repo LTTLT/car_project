@@ -338,7 +338,7 @@
               <MiscControls></MiscControls>
               <Define>USE_HAL_DRIVER,STM32F103xB</Define>
               <Undefine></Undefine>
-              <IncludePath>../Core/Inc;     ../Drivers/STM32F1xx_HAL_Driver/Inc;     ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy;     ../Drivers/CMSIS/Device/ST/STM32F1xx/Include;     ../Drivers/CMSIS/Include;     .\HARDWARE</IncludePath>
+              <IncludePath>../Core/Inc;../Drivers/STM32F1xx_HAL_Driver/Inc;../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy;../Drivers/CMSIS/Device/ST/STM32F1xx/Include;../Drivers/CMSIS/Include;.\HARDWARE;..\MDK-ARM;..\control</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -574,9 +574,24 @@
               <FilePath>.\motor_data.c</FilePath>
             </File>
             <File>
-              <FileName>motor_data.h</FileName>
+              <FileName>motor_drive.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\motor_drive.c</FilePath>
+            </File>
+            <File>
+              <FileName>motor_drive.h</FileName>
               <FileType>5</FileType>
-              <FilePath>.\motor_data.h</FilePath>
+              <FilePath>.\motor_drive.h</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>control</GroupName>
+          <Files>
+            <File>
+              <FileName>pid.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\pid.c</FilePath>
             </File>
           </Files>
         </Group>
