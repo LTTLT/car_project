@@ -2,7 +2,7 @@
 l298n驱动电机文件
 使用引脚(左边in1，右边in2)
 电机1：PA5,PA6,PB4(PWM)
-电机2：PB2,PB10,PB5(PWM)
+电机2：PB11,PB10,PB5(PWM)
 电机3：PB9,PB8,PB0(PWM)
 电机4：PB7,PB6,PB1(PWM)
 超声波         超声波
@@ -62,6 +62,7 @@ void motor_drive_init(void)
 	PID_init(&motor_pid_struct[i], PID_POSITION,motor_pid,5.0f, 5.0f);
 	}
 }
+
 /*
 函数名：motor_drive
 作用：l298n电机驱动

@@ -74,10 +74,10 @@ void Error_Handler(void);
 #define motor3_pwm_GPIO_Port GPIOB
 #define motor4_pwm_Pin GPIO_PIN_1
 #define motor4_pwm_GPIO_Port GPIOB
-#define motor2_in1_Pin GPIO_PIN_2
-#define motor2_in1_GPIO_Port GPIOB
 #define motor2_in2_Pin GPIO_PIN_10
 #define motor2_in2_GPIO_Port GPIOB
+#define motor2_in1_Pin GPIO_PIN_11
+#define motor2_in1_GPIO_Port GPIOB
 #define motor3_data_Pin GPIO_PIN_12
 #define motor3_data_GPIO_Port GPIOB
 #define motor3_data_EXTI_IRQn EXTI15_10_IRQn

@@ -65,6 +65,7 @@ void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
 		}
 }
 
+
 /*
 函数名：get_chassis_data_point
 作用：	回调指针

@@ -3,13 +3,15 @@
 超声波测距文件
 使用引脚
 PA1（output），PA15（TIM2_CH1）左
-PA2(output),PA15(TIM2_CH2)右
+PA2(output),Pb3
+(TIM2_CH2)右
 */
 /*
 函数名：Delay_us
 作用：延时微秒（其实不太可能，不过只要保证大于等于20us即可）
 备注：
 */
+
 void Delay_us(uint32_t t)
 {   
     int n  =  11;
